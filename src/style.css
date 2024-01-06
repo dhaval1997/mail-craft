@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.activeNav div::before {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  right: 0;
+  top: 100%;
+  background-image: radial-gradient(
+    circle at 100% 100%,
+    transparent 12px,
+    rgba(40, 39, 39, 0.184) 12px
+  );
+  rotate: 90deg;
+}
+
+.activeNav div::after {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  right: 0;
+  bottom: 100%;
+  background-image: radial-gradient(
+    circle at 100% 100%,
+    transparent 12px,
+    rgba(40, 39, 39, 0.184) 12px
+  );
+  rotate: 180deg;
+}
+
+@media screen and (min-width: 640px) {
+  .afterNav::before {
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    right: 0px;
+    bottom: 0;
+    background-image: radial-gradient(
+      circle at 100% 100%,
+      transparent 12px,
+      rgba(40, 39, 39, 0.184) 12px
+    );
+    rotate: 180deg;
+  }
+
+  .afterNav::before {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    right: 0px;
+    bottom: 0;
+    background-image: radial-gradient(
+      circle at 100% 100%,
+      transparent 8px,
+      rgba(255, 255, 255, 0.6) 8px
+    );
+    rotate: 180deg;
+  }
+
+  .afterNav::after {
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    right: 0;
+    top: 0;
+    background-image: radial-gradient(
+      circle at 100% 100%,
+      transparent 12px,
+      rgba(40, 39, 39, 0.184) 12px
+    );
+    rotate: 90deg;
+  }
+}
